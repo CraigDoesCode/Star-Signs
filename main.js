@@ -5,21 +5,23 @@ const actions = [];
 
 const prompt = require('prompt-sync')();
 
-const dateOfBirth = prompt('Please enter your date of birth (dd/mm/yyyy):');
+let dateOfBirth = prompt('Please enter your date of birth (dd/mm/yyyy):');
+let dateValid = false
+ let dateRegex = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/
 
-
+ // make sure it is a date in the correct format use regex
+// if not prompt again
 //console.log(dateOfBirth);
-function checkDate(str){
-    let date = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/)
-    console.log(date)
-    if (date === str){
-        console.log(date, ': worked')
+while (dateValid === false){
+    if (dateRegex.test(dateOfBirth)){
+        console.log('worked')
+        dateValid = true;
+    }else{
+        console.log('\nThe date is not correctly formatted (dd/mm/yyyy)\n')
+        dateOfBirth = prompt('Please enter your date of birth (dd/mm/yyyy):');
     }
 }
 
-checkDate(dateOfBirth);
-// make sure it is a date in the correct format use regex
-// if not prompt again
 
 // use date of birth to select star sign 
 // pick a positive or negaive prediction
