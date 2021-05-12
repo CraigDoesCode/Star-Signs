@@ -6,4 +6,7 @@ With this app you will be able to enter you star sign and it with retrun a predi
  - Enter your birthday
  - Randomly generate a positive or negative prediction
  - Randomly generate and action
- - Randomly generate a result for doing that action 
+ - Randomly generate a result for doing that action
+
+## Built With
+ - Node.js v14.15.4
