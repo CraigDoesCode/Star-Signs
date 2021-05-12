@@ -134,20 +134,18 @@ for (sign in starSigns){
         const isPositive = Math.random() < 0.5;
         if (isPositive){
             let index = Math.floor(Math.random() * starSigns[sign].positiveQuotes.length)
-            //console.log(index);
             phrase += ` ${starSigns[sign].positiveQuotes[index]}`;
-            index = Math.floor(Math.random() * starSigns[sign].actions.length)
-            phrase += ` ${starSigns[sign].actions[index]}`;
+
         } else {  
             console.log('is negative');
-            let index = Math.floor(Math.random() * starSigns[sign].negativeQuotes.length)
+            let index = Math.floor(Math.random() * starSigns[sign].negativeQuotes.length);
             phrase += ` ${starSigns[sign].negativeQuotes[index]}`;
-            index = Math.floor(Math.random() * starSigns[sign].actions.length)
-            phrase += ` ${starSigns[sign].actions[index]}`;
         }
-        console.log(phrase);
-        
-        
+        index = Math.floor(Math.random() * starSigns[sign].actions.length);
+        phrase += ` ${starSigns[sign].actions[index]}`;
+        index = Math.floor(Math.random() * starSigns[sign].result.length);
+        phrase += ` ${starSigns[sign].result[index]}`;
+        console.log(phrase);   
     } 
 }
 // use date of birth to select star sign 

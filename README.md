@@ -3,5 +3,7 @@
 With this app you will be able to enter you star sign and it with retrun a predition and an action to help the prediction come true.
 
 ## Features
- - Suggested answer if incorrectly typed
- - 
+ - Enter your birthday
+ - Randomly generate a positive or negative prediction
+ - Randomly generate and action
+ - Randomly generate a result for doing that action 
